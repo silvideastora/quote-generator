@@ -1,6 +1,6 @@
 import Head from 'next/head'
 //Components
-import { BackgroundImg, BackgroundImg2, FooterCon, FooterLink, GradientBackgroundCon } from '@/components/QuoteGenerator/QuoteGeneratorElement'
+import { BackgroundImg, BackgroundImg2, FooterCon, FooterLink, GenerateQuoteBtn, GenerateQuoteBtnText, GradientBackgroundCon, QuoteGeneratorCon, QuoteGeneratorInnerCon, QuoteGeneratorSubTitle, QuoteGeneratorTitle } from '@/components/QuoteGenerator/QuoteGeneratorElement'
 //Assets
 import Cloud from '../assets/k.png'
 import Pink from '../assets/p.png'
@@ -19,6 +19,30 @@ export default function Home() {
       </Head>
       {/*Background*/ }
       <GradientBackgroundCon>
+      {/* Quote generator Modal Pop-up */ }
+
+      {/* Quote generator*/}
+      <QuoteGeneratorCon>
+      <QuoteGeneratorInnerCon>
+        <QuoteGeneratorTitle>
+          Daily Inspiration:
+        </QuoteGeneratorTitle>
+        
+        <QuoteGeneratorSubTitle>
+          Buscando una pincelada de inspiración? Genera una card con una frase random
+          inspiracional provista por <FooterLink href="https://zenquotes.io/" target='_blank' rel='noopener noreferrer'>
+            Zenquotes API
+          </FooterLink>
+        </QuoteGeneratorSubTitle>
+
+        <GenerateQuoteBtn>
+          <GenerateQuoteBtnText>
+            Dame una frase!
+          </GenerateQuoteBtnText>
+        </GenerateQuoteBtn>
+      </QuoteGeneratorInnerCon>
+      </QuoteGeneratorCon>
+      {/*Background Images */}
         <BackgroundImg
         src={Cloud}
         height="300"
@@ -29,6 +53,9 @@ export default function Home() {
         height="500"
         alt="cloudy background"
         />
+        
+        {/*Footer container */}
+        
         <FooterCon>
           <>
           Quotes Generated:{numberOfQuotes}
