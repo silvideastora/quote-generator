@@ -1,3 +1,11 @@
+# Generador de frases inspiradoras
+1. Fetch una frase random
+2. Convierte una quote en líneas (quote text received)
+3. Convierte el texto de autos en líneas ( quote autor)
+4. Agrega una imagen a la frase
+5. Convierte estos elementos a --> SVG
+6. SVG --> img como png (base64 en lambda)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
